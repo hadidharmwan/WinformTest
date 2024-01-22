@@ -19,7 +19,11 @@ namespace WinformTest
 
         private void Form2_Load(object sender, EventArgs e)
         {
-
+            
+            textID.Text = Form1.IDKaryawan;
+            textNama.Text = Form1.NmKaryawn;
+            textTgl.Text = Form1.TglmasukKerja;
+            textUsia.Text = Form1.Usia;
         }
 
         private void label3_Click(object sender, EventArgs e)

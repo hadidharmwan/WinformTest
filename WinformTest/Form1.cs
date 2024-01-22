@@ -62,8 +62,14 @@ namespace WinformTest
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-        
 
+            IDKaryawan = textID.Text;
+            NmKaryawn = textNama.Text;
+            TglmasukKerja = textTgl.Text;
+            Usia = textUsia.Text;
+
+            Form2 toForm = new Form2();
+            toForm.Show();
             //string id = textID.Text.ToString();
             //string nama = textNama.Text.ToString();
             //string tgl = textTgl.Text.ToString();
