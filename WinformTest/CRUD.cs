@@ -107,8 +107,6 @@ namespace WinformTest
             table = new DataTable();
             adpt.Fill(table);
             return table;
-
-
         }
     }
 }
