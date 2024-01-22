@@ -19,19 +19,18 @@ namespace WinformTest
         }
         public static string IDKaryawan = "";
         public static string NmKaryawn = "";
-        public static string TglmasukKerja ="";
-        public static string Usia ="";
-      
-
+        public static string TglmasukKerja = "";
+        public static string Usia = "";
+    
 
 
         private void button1_Click(object sender, EventArgs e)
         {
             Form2 toForm = new Form2();
-            //this.Hide();
-            //formNew.ShowDialog();
-            //this.Close();
-            toForm.Show();
+            this.Hide();
+            toForm.ShowDialog();
+            this.Close();
+            //toForm.Show();
         }
 
         public void display()
@@ -50,7 +49,7 @@ namespace WinformTest
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            btnEdit.Enabled = false;
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -58,23 +57,25 @@ namespace WinformTest
 
         }
 
-     
+
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            string usia = textUsia.Text.ToString();
-            string usia1 = textUsia1.Text.ToString();
+
             CRUD sc = new CRUD();
             //sc.searchByUsia(usia)
 
 
-            if (textUsia.Text == "" && textUsia1.Text == "")
+            if (textUsia.Text == "" && textUsia1.Text == "" )
             {
                 dataGridView1.DataSource = sc.viewdata();
             }
-            else { dataGridView1.DataSource = sc.searchByUsia(textUsia.Text, textUsia1.Text); }
+            else 
+            {
+                dataGridView1.DataSource = sc.searchByUsia(textUsia.Text, textUsia1.Text);
+                //dataGridView1.DataSource = sc.searchByTgl(textTgl.Text, textTgl1.Text);
 
 
-
+            }
 
         }
 
@@ -87,7 +88,9 @@ namespace WinformTest
             Usia = textUsia.Text;
 
             Form2 toForm = new Form2();
-            toForm.Show();
+            this.Hide();
+            toForm.ShowDialog();
+            this.Close();
             //string id = textID.Text.ToString();
             //string nama = textNama.Text.ToString();
             //string tgl = textTgl.Text.ToString();
@@ -122,7 +125,8 @@ namespace WinformTest
             textNama.Text = nm;
             textTgl.Text = tg;
             textUsia.Text = us;
-    
+            btnEdit.Enabled = true;
+
         }
 
         private void btnClose_Click(object sender, EventArgs e)

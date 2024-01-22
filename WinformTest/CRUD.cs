@@ -15,7 +15,7 @@ namespace WinformTest
      
         public string insert(string idKaryawan, string nmKaryawan, string tglMasukKerja, string usia)
         {
-            string ubahButton;
+          
             string pesan = "Gagal";
             string id = idKaryawan;
             string nama = nmKaryawan;
@@ -28,7 +28,7 @@ namespace WinformTest
 
             //if (ubahButton == "Save") query = "INSERT INTO karyawan(IDKaryawan,NmKaryawan,TglMasukKerja,Usia) values (@idKaryawan,@nmKaryawan , @tglMasukKerja , @usia) ";
             //if (ubahButton == "Update") query = "update karyawan set NmKaryawan=@nmKaryawan, TglMasukKerja=@tglMasukKerja,Usia=@usia where IDKaryawan =@idKaryawan";
-            string query = String.Format("INSERT INTO karyawan(IDKaryawan,NmKaryawan,TglMasukKerja,Usia) values (@idKaryawan,@nmKaryawan , @tglMasukKerja , @usia) ");
+           string query = String.Format("INSERT INTO karyawan(IDKaryawan,NmKaryawan,TglMasukKerja,Usia) values (@idKaryawan,@nmKaryawan , @tglMasukKerja , @usia) ");
             SqlCommand cmd = new SqlCommand(query, con);
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.Add(new SqlParameter("idKaryawan", id));
@@ -101,6 +101,17 @@ namespace WinformTest
             adpt.Fill(table);
             return table;
 
+        }
+
+        public DataTable searchByTgl(string tgl, string tgl1)
+        {
+            DataTable table;
+            string query = "select * from karyawan where TglMasukKerja Between " + tgl + " and " + tgl1;
+
+            SqlDataAdapter adpt = new SqlDataAdapter(query, sql);
+            table = new DataTable();
+            adpt.Fill(table);
+            return table;
         }
     }
 }

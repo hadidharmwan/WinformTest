@@ -1,4 +1,6 @@
-﻿namespace WinformTest
+﻿using System.Windows.Forms;
+
+namespace WinformTest
 {
     partial class Form1
     {
@@ -39,11 +41,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textUsia = new System.Windows.Forms.TextBox();
             this.textTgl = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textTgl1 = new System.Windows.Forms.TextBox();
             this.textUsia1 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.textNama = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -146,12 +149,12 @@
             this.textTgl.Size = new System.Drawing.Size(100, 20);
             this.textTgl.TabIndex = 10;
             // 
-            // textBox4
+            // textTgl1
             // 
-            this.textBox4.Location = new System.Drawing.Point(314, 30);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 11;
+            this.textTgl1.Location = new System.Drawing.Point(314, 30);
+            this.textTgl1.Name = "textTgl1";
+            this.textTgl1.Size = new System.Drawing.Size(100, 20);
+            this.textTgl1.TabIndex = 11;
             // 
             // textUsia1
             // 
@@ -184,16 +187,26 @@
             this.textNama.Size = new System.Drawing.Size(110, 20);
             this.textNama.TabIndex = 15;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(180, 413);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(120, 13);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Double Click Cell to Edit";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(673, 435);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.textNama);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textUsia1);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textTgl1);
             this.Controls.Add(this.textTgl);
             this.Controls.Add(this.textUsia);
             this.Controls.Add(this.label3);
@@ -227,11 +240,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textUsia;
         private System.Windows.Forms.TextBox textTgl;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textTgl1;
         private System.Windows.Forms.TextBox textUsia1;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox textNama;
+        private Label label4;
     }
 }
 
