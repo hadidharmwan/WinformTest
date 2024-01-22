@@ -63,18 +63,13 @@ namespace WinformTest
 
             CRUD sc = new CRUD();
             //sc.searchByUsia(usia)
-
-
-            if (textUsia.Text == "" && textUsia1.Text == "" )
+            if (textNama.Text == "" && textNama1.Text == "")
             {
                 dataGridView1.DataSource = sc.viewdata();
             }
-            else 
+            else
             {
-                dataGridView1.DataSource = sc.searchByUsia(textUsia.Text, textUsia1.Text);
-                //dataGridView1.DataSource = sc.searchByTgl(textTgl.Text, textTgl1.Text);
-
-
+                dataGridView1.DataSource = sc.searchByNama(textNama.Text, textNama1.Text);
             }
 
         }

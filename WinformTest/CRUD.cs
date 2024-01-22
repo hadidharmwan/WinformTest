@@ -106,12 +106,26 @@ namespace WinformTest
         public DataTable searchByTgl(string tgl, string tgl1)
         {
             DataTable table;
-            string query = "select * from karyawan where TglMasukKerja Between " + tgl + " and " + tgl1;
+            string query = "select * from karyawan where TglMasukKerja Between '" + tgl + "' and '" + tgl1+ "'";
 
             SqlDataAdapter adpt = new SqlDataAdapter(query, sql);
             table = new DataTable();
             adpt.Fill(table);
             return table;
         }
+
+
+        public DataTable searchByNama(string input, string input1)
+        {
+            DataTable table;
+
+            string query = "select * from karyawan where NmKaryawan like '%" + input + "%' AND NmKaryawan like '%" + input1 + "%'";
+            SqlDataAdapter adp = new SqlDataAdapter(query, sql);
+            table = new DataTable();
+            adp.Fill(table);
+
+            return table;
+        }
+
     }
 }

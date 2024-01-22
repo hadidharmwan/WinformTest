@@ -43,10 +43,13 @@ namespace WinformTest
             this.textTgl = new System.Windows.Forms.TextBox();
             this.textTgl1 = new System.Windows.Forms.TextBox();
             this.textUsia1 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textNama1 = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.textNama = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,7 +122,7 @@ namespace WinformTest
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 50);
+            this.label2.Location = new System.Drawing.Point(25, 59);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(28, 13);
             this.label2.TabIndex = 7;
@@ -128,7 +131,7 @@ namespace WinformTest
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 77);
+            this.label3.Location = new System.Drawing.Point(22, 89);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 13);
             this.label3.TabIndex = 8;
@@ -151,7 +154,7 @@ namespace WinformTest
             // 
             // textTgl1
             // 
-            this.textTgl1.Location = new System.Drawing.Point(314, 30);
+            this.textTgl1.Location = new System.Drawing.Point(314, 82);
             this.textTgl1.Name = "textTgl1";
             this.textTgl1.Size = new System.Drawing.Size(100, 20);
             this.textTgl1.TabIndex = 11;
@@ -163,12 +166,12 @@ namespace WinformTest
             this.textUsia1.Size = new System.Drawing.Size(100, 20);
             this.textUsia1.TabIndex = 12;
             // 
-            // textBox6
+            // textNama1
             // 
-            this.textBox6.Location = new System.Drawing.Point(314, 82);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 13;
+            this.textNama1.Location = new System.Drawing.Point(314, 30);
+            this.textNama1.Name = "textNama1";
+            this.textNama1.Size = new System.Drawing.Size(100, 20);
+            this.textNama1.TabIndex = 13;
             // 
             // btnSearch
             // 
@@ -196,15 +199,45 @@ namespace WinformTest
             this.label4.TabIndex = 16;
             this.label4.Text = "Double Click Cell to Edit";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(256, 33);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(23, 13);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "s/d";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(256, 63);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(23, 13);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "s/d";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(256, 89);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(23, 13);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "s/d";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(673, 435);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textNama);
             this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.textNama1);
             this.Controls.Add(this.textUsia1);
             this.Controls.Add(this.textTgl1);
             this.Controls.Add(this.textTgl);
@@ -242,10 +275,13 @@ namespace WinformTest
         private System.Windows.Forms.TextBox textTgl;
         private System.Windows.Forms.TextBox textTgl1;
         private System.Windows.Forms.TextBox textUsia1;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textNama1;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox textNama;
         private Label label4;
+        private Label label5;
+        private Label label6;
+        private Label label7;
     }
 }
 
