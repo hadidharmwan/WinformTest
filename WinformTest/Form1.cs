@@ -15,6 +15,23 @@ namespace WinformTest
         public Form1()
         {
             InitializeComponent();
+            display();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public void display()
+        {
+            CRUD cek = new CRUD();
+            dataGridView1.DataSource = cek.viewdata();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
