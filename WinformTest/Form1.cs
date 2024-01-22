@@ -21,9 +21,9 @@ namespace WinformTest
         private void button1_Click(object sender, EventArgs e)
         {
             Form2 formNew = new Form2();
-            this.Hide();
-            formNew.ShowDialog();
-            this.Close();
+         
+            formNew.Show();
+            
         }
 
         public void display()

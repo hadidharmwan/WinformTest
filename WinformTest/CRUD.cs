@@ -10,24 +10,26 @@ namespace WinformTest
 {
     class CRUD
     {
-        SqlConnection con = new SqlConnection();
-        string sql = "Data Source =XC6089/MSSQLSERVERS;Initial Catalog=db_test;User ID=sa;Password=123";
+        public SqlConnection con = new SqlConnection();
+        string sql = "Data Source =XC6089\\MSSQLSERVERS;Initial Catalog=db_test;User ID=sa;Password=123";
      
-        public string insert(string nmKaryawan, string tglMasukKerja, int usia)
+        public string insert(string idKaryawan, string nmKaryawan, string tglMasukKerja, string usia)
         {
             string pesan = "Gagal";
-  
+            string id = idKaryawan;
             string nama = nmKaryawan;
             string tgl = tglMasukKerja;
-            int umur = usia;
+            string umur = usia;
 
-            string query = String.Format("INSERT INTO karyawan(NmKaryawan,TglMasukKerja,Usia) values (@nmKaryawan , @tglMasukKerja , @usia) ");
+            con.ConnectionString = sql;
+            string query = String.Format("INSERT INTO karyawan(IDKaryawan,NmKaryawan,TglMasukKerja,Usia) values (@idKaryawan,@nmKaryawan , @tglMasukKerja , @usia) ");
             SqlCommand cmd = new SqlCommand(query, con);
             con.Open();
             cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add(new SqlParameter("idKaryawan", id));
             cmd.Parameters.Add(new SqlParameter("nmKaryawan", nama));
             cmd.Parameters.Add(new SqlParameter("tglMasukKerja", tgl));
-            cmd.Parameters.Add(new SqlParameter("usia", usia));
+            cmd.Parameters.Add(new SqlParameter("usia", umur));
             cmd.ExecuteNonQuery();
             con.Close();
             pesan = "Sukses Daftar";

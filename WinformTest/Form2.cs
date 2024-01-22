@@ -26,5 +26,21 @@ namespace WinformTest
         {
 
         }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            string id = textID.Text.ToString();
+            string nama = textNama.Text.ToString();
+            string tgl = textTgl.Text.ToString();
+            string usia = textUsia.Text.ToString();
+         
+
+            string btn = btnSave.Name;
+
+
+            CRUD create = new CRUD();
+
+            create.insert(id,nama,tgl,usia);
+        }
     }
 }
