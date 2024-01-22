@@ -21,13 +21,17 @@ namespace WinformTest
         public static string NmKaryawn = "";
         public static string TglmasukKerja ="";
         public static string Usia ="";
+      
+
+
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 formNew = new Form2();
-            this.Hide();
-            formNew.ShowDialog();
-            this.Close();
+            Form2 toForm = new Form2();
+            //this.Hide();
+            //formNew.ShowDialog();
+            //this.Close();
+            toForm.Show();
         }
 
         public void display()
@@ -57,6 +61,20 @@ namespace WinformTest
      
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            string usia = textUsia.Text.ToString();
+            string usia1 = textUsia1.Text.ToString();
+            CRUD sc = new CRUD();
+            //sc.searchByUsia(usia)
+
+
+            if (textUsia.Text == "" && textUsia1.Text == "")
+            {
+                dataGridView1.DataSource = sc.viewdata();
+            }
+            else { dataGridView1.DataSource = sc.searchByUsia(textUsia.Text, textUsia1.Text); }
+
+
+
 
         }
 
@@ -99,9 +117,7 @@ namespace WinformTest
             string nm = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[1].Value);
             string tg = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[2].Value);
             string us = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[3].Value);
-      
-
-
+     
             textID.Text = id;
             textNama.Text = nm;
             textTgl.Text = tg;

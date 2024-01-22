@@ -24,6 +24,7 @@ namespace WinformTest
             textNama.Text = Form1.NmKaryawn;
             textTgl.Text = Form1.TglmasukKerja;
             textUsia.Text = Form1.Usia;
+           
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -37,15 +38,12 @@ namespace WinformTest
             string nama = textNama.Text.ToString();
             string tgl = textTgl.Text.ToString();
             string usia = textUsia.Text.ToString();
-         
-
             string btn = btnSave.Name;
-
-
             CRUD create = new CRUD();
-
             create.insert(id,nama,tgl,usia);
             refreshForm();
+            Form1 sd = new Form1();
+           
         }
 
 

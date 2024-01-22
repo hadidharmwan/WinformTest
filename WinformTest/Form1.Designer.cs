@@ -40,7 +40,7 @@
             this.textUsia = new System.Windows.Forms.TextBox();
             this.textTgl = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textUsia1 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.textNama = new System.Windows.Forms.TextBox();
@@ -153,12 +153,12 @@
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 11;
             // 
-            // textBox5
+            // textUsia1
             // 
-            this.textBox5.Location = new System.Drawing.Point(314, 56);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 12;
+            this.textUsia1.Location = new System.Drawing.Point(314, 56);
+            this.textUsia1.Name = "textUsia1";
+            this.textUsia1.Size = new System.Drawing.Size(100, 20);
+            this.textUsia1.TabIndex = 12;
             // 
             // textBox6
             // 
@@ -192,7 +192,7 @@
             this.Controls.Add(this.textNama);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textUsia1);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textTgl);
             this.Controls.Add(this.textUsia);
@@ -228,7 +228,7 @@
         private System.Windows.Forms.TextBox textUsia;
         private System.Windows.Forms.TextBox textTgl;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textUsia1;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox textNama;

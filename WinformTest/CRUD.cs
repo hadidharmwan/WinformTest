@@ -15,16 +15,21 @@ namespace WinformTest
      
         public string insert(string idKaryawan, string nmKaryawan, string tglMasukKerja, string usia)
         {
+            string ubahButton;
             string pesan = "Gagal";
             string id = idKaryawan;
             string nama = nmKaryawan;
             string tgl = tglMasukKerja;
             string umur = usia;
+            //string query = "";
 
             con.ConnectionString = sql;
+            con.Open();
+
+            //if (ubahButton == "Save") query = "INSERT INTO karyawan(IDKaryawan,NmKaryawan,TglMasukKerja,Usia) values (@idKaryawan,@nmKaryawan , @tglMasukKerja , @usia) ";
+            //if (ubahButton == "Update") query = "update karyawan set NmKaryawan=@nmKaryawan, TglMasukKerja=@tglMasukKerja,Usia=@usia where IDKaryawan =@idKaryawan";
             string query = String.Format("INSERT INTO karyawan(IDKaryawan,NmKaryawan,TglMasukKerja,Usia) values (@idKaryawan,@nmKaryawan , @tglMasukKerja , @usia) ");
             SqlCommand cmd = new SqlCommand(query, con);
-            con.Open();
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.Add(new SqlParameter("idKaryawan", id));
             cmd.Parameters.Add(new SqlParameter("nmKaryawan", nama));
@@ -83,6 +88,19 @@ namespace WinformTest
             table = new DataTable();
             adpt.Fill(table);
             return table;
+        }
+
+
+        public DataTable searchByUsia(string usia, string usia1)
+        {
+            DataTable table;
+            string query = "select * from karyawan where Usia Between "+usia+" and " +usia1;
+         
+            SqlDataAdapter adpt = new SqlDataAdapter(query, sql);
+            table = new DataTable();
+            adpt.Fill(table);
+            return table;
+
         }
     }
 }
