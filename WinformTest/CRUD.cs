@@ -11,7 +11,7 @@ namespace WinformTest
     class CRUD
     {
         SqlConnection con = new SqlConnection();
-        string sql = "Data Source =XC6089/MSSQLSERVERS;Initial Catalog=db_test;";
+        string sql = "Data Source =XC6089/MSSQLSERVERS;Initial Catalog=db_test;User ID=sa;Password=123";
      
         public string insert(string nmKaryawan, string tglMasukKerja, int usia)
         {
@@ -100,8 +100,8 @@ namespace WinformTest
         {
 
             DataTable table;
-            string con = "Data Source=XC6089;Initial Catalog=ProdiTI;User ID=sa;Password=bintangterang32";
-            string query = "select * from [HRD].[Mahasiswa]";
+            string con = "Data Source =XC6089\\MSSQLSERVERS;Initial Catalog=db_test;User ID=sa;Password=123";
+            string query = "select * from karyawan";
 
             SqlDataAdapter adpt = new SqlDataAdapter(query, con);
             table = new DataTable();
