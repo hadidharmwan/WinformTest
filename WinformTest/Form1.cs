@@ -17,6 +17,10 @@ namespace WinformTest
             InitializeComponent();
             display();
         }
+        public static string IDKaryawan = "";
+        public static string NmKaryawn = "";
+        public static string TglmasukKerja ="";
+        public static string Usia ="";
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -40,11 +44,6 @@ namespace WinformTest
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -55,16 +54,7 @@ namespace WinformTest
 
         }
 
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+     
         private void btnSearch_Click(object sender, EventArgs e)
         {
 
@@ -74,22 +64,15 @@ namespace WinformTest
         {
         
 
-            string id = textID.Text.ToString();
-            string nama = textNama.Text.ToString();
-            string tgl = textTgl.Text.ToString();
-            string usia = textUsia.Text.ToString();
-          
-
-
-            string btn = btnEdit.Name;
-
-
-            CRUD crd = new CRUD();
-
-            crd.update(id,nama,tgl,usia);
-
-            refreshForm();
-            display();
+            //string id = textID.Text.ToString();
+            //string nama = textNama.Text.ToString();
+            //string tgl = textTgl.Text.ToString();
+            //string usia = textUsia.Text.ToString();
+            //string btn = btnEdit.Name;
+            //CRUD crd = new CRUD();
+            //crd.update(id,nama,tgl,usia);
+            //refreshForm();
+            //display();
         }
 
 

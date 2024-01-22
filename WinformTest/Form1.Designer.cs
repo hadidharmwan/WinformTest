@@ -112,7 +112,6 @@
             this.label1.Size = new System.Drawing.Size(85, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "Nama Karyawan";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -153,7 +152,6 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 11;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // textBox5
             // 
@@ -161,7 +159,6 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(100, 20);
             this.textBox5.TabIndex = 12;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // textBox6
             // 
@@ -184,7 +181,7 @@
             // 
             this.textNama.Location = new System.Drawing.Point(128, 30);
             this.textNama.Name = "textNama";
-            this.textNama.Size = new System.Drawing.Size(100, 20);
+            this.textNama.Size = new System.Drawing.Size(110, 20);
             this.textNama.TabIndex = 15;
             // 
             // Form1
