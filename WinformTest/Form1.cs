@@ -63,15 +63,29 @@ namespace WinformTest
 
             CRUD sc = new CRUD();
             //sc.searchByUsia(usia)
-            if (textNama.Text == "" && textNama1.Text == "")
+            if ((textNama.Text == "" && textNama1.Text == "") && (textUsia.Text == "" && textUsia1.Text == "") && (textTgl.Text == "" && textTgl1.Text == ""))
             {
                 dataGridView1.DataSource = sc.viewdata();
             }
             else
             {
-                dataGridView1.DataSource = sc.searchByNama(textNama.Text, textNama1.Text);
-            }
+                if(textNama.Text != "" && textNama1.Text != "")
+                {
 
+                 dataGridView1.DataSource = sc.searchByNama(textNama.Text, textNama1.Text);
+                }
+                else if (textUsia.Text != "" && textUsia1.Text != "")
+                {
+
+                    dataGridView1.DataSource = sc.searchByUsia(textUsia.Text, textUsia1.Text);
+                }
+                else if (textTgl.Text != "" && textTgl1.Text != "")
+                {
+
+                    dataGridView1.DataSource = sc.searchByTgl(textTgl.Text, textTgl1.Text);
+                }
+
+            }
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
