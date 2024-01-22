@@ -20,7 +20,10 @@ namespace WinformTest
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Form2 formNew = new Form2();
+            this.Hide();
+            formNew.ShowDialog();
+            this.Close();
         }
 
         public void display()
@@ -30,6 +33,36 @@ namespace WinformTest
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
         {
 
         }
