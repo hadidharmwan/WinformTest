@@ -10,7 +10,7 @@ namespace WinformTest
 {
     class CRUD
     {
-        public SqlConnection con = new SqlConnection();
+        SqlConnection con = new SqlConnection();
         string sql = "Data Source =XC6089\\MSSQLSERVERS;Initial Catalog=db_test;User ID=sa;Password=123";
      
         public string insert(string idKaryawan, string nmKaryawan, string tglMasukKerja, string usia)
@@ -36,61 +36,38 @@ namespace WinformTest
             return pesan;
 
         }
-        public string update(string id,string nmKaryawan, string tglMasukKerja, int usia)
+        public string update(string idKaryawan, string nmKaryawan, string tglMasukKerja, string usia)
         {
 
             string pesan = "sukses";
 
-            string query = String.Format("update [HRD].[Mahasiswa] set NmKaryawan=@nmKaryawan, TglMasukKerja=@tglMasukKerja,Usia=@usia where IDKaryawan =@iDkaryawan");
+            string query = String.Format("update karyawan set NmKaryawan=@nmKaryawan, TglMasukKerja=@tglMasukKerja,Usia=@usia where IDKaryawan =@iDkaryawan");
             con.ConnectionString = sql;
             SqlCommand cmd = new SqlCommand(query, con);
             con.Open();
-
-
-
             cmd.CommandType = CommandType.Text;
-            cmd.Parameters.Add(new SqlParameter("iDkaryawan", id));
+            cmd.Parameters.Add(new SqlParameter("iDkaryawan", idKaryawan));
             cmd.Parameters.Add(new SqlParameter("nmKaryawan", nmKaryawan));
             cmd.Parameters.Add(new SqlParameter("tglMasukKerja", tglMasukKerja));
             cmd.Parameters.Add(new SqlParameter("usia", usia));
-
-
-
             cmd.ExecuteNonQuery();
             con.Close();
-
-
-
             return pesan;
 
         }
 
-        public void view()
-        {
-            con.Open();
-            DataTable dt = new DataTable();
-            SqlDataAdapter adpt = new SqlDataAdapter("select * from karyawan ", sql);
-            adpt.Fill(dt);
-
-            con.Close();
-        }
 
         public string delete(string delete)
         {
             string str = "";
             string nb = delete;
-            string con = "Data Source=XC6089;Initial Catalog=ProdiTI;User ID=sa;Password=bintangterang32";
-
             SqlConnection koneksi = new SqlConnection();
-            koneksi.ConnectionString = con;
+            koneksi.ConnectionString = sql;
             koneksi.Open();
-
-            str = "delete from [HRD].[Mahasiswa] where NamaMhs=@nb";
+            str = "delete from karyawan where IDKaryawan=@id";
             SqlCommand cmd = new SqlCommand(str, koneksi);
             cmd.CommandType = CommandType.Text;
-
-
-            cmd.Parameters.Add(new SqlParameter("nb", nb));
+            cmd.Parameters.Add(new SqlParameter("id", nb));
             cmd.ExecuteNonQuery();
             koneksi.Close();
 
@@ -100,12 +77,9 @@ namespace WinformTest
 
         public DataTable viewdata()
         {
-
             DataTable table;
-            string con = "Data Source =XC6089\\MSSQLSERVERS;Initial Catalog=db_test;User ID=sa;Password=123";
             string query = "select * from karyawan";
-
-            SqlDataAdapter adpt = new SqlDataAdapter(query, con);
+            SqlDataAdapter adpt = new SqlDataAdapter(query, sql);
             table = new DataTable();
             adpt.Fill(table);
             return table;

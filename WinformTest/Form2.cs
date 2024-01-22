@@ -41,6 +41,17 @@ namespace WinformTest
             CRUD create = new CRUD();
 
             create.insert(id,nama,tgl,usia);
+            refreshForm();
+        }
+
+
+        void refreshForm()
+        {
+            textID.Text = "";
+            textNama.Text = "";
+            textTgl.Text = "";
+            textUsia.Text = "";
+           
         }
     }
 }
